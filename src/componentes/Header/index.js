@@ -4,7 +4,7 @@ import logotipo from "../../images/logotipo.jpeg";
 export const Header = () => {
   return (
     <header>
-      <a href="#">
+      <a href="/">
         <div className="logo">
           <img src={logotipo} alt="logo" width="150" />
         </div>
