@@ -12,6 +12,8 @@ export const Inicio = () => {
         <h1>Productos</h1>
       </Link>
       <img src={Portada} alt="inicio"/>
+        <h1>Amezola Store </h1>
+        <p> Telefono de contacto +52 3310970375 </p>
     </div>
   
   );
