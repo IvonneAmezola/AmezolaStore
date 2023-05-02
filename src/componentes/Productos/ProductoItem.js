@@ -1,19 +1,17 @@
 import React from "react";
-import IMG from "../../images/conicas.jpeg";
+/*import IMG from "../../images/conicas.jpeg";
 import IMG2 from "../../images/juegopatonas.jpeg";
 import IMG3 from "../../images/individual.jpeg";
 import IMG4 from "../../images/juegobala.jpeg";
 import IMG5 from "../../images/juegocilindro.jpeg";
-import IMG6 from "../../images/parbalita.jpeg";
+import IMG6 from "../../images/parbalita.jpeg";*/
 
 export const ProductoItem = ({
     id, 
     title, 
     price, 
     image, 
-    category, 
-    cantidad,
-
+    category
 }) => {
 
     console.log(image)
@@ -22,7 +20,7 @@ export const ProductoItem = ({
         <><div className="producto">
             <a href="#">
                 <div className="producto__img">
-                    <img src={image.default} alt="" />
+                    <img src={image.default} alt={title} />
                 </div>
             </a>
             <div className="producto__footer">
@@ -35,7 +33,8 @@ export const ProductoItem = ({
                     Añadir al carrito
                 </button>
                 <div>
-                    <a href="#" className="btn"> Vista
+                    <a href="#" className="btn"> 
+                        Vista
                     </a>
                 </div>
             </div>

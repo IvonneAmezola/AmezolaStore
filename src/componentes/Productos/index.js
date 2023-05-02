@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 
 import {DataContext } from "../../context/Dataprovider";
-import { ProductoItem } from "./ProductoItem";
+import {ProductoItem} from "./Productos/ProductoItem";
 
 export const ProductosLista = () => {
 
@@ -15,7 +15,7 @@ export const ProductosLista = () => {
             <h1 className="title">PRODUCTOS</h1>
             <div className="productos">
                 {
-                    productos.map(producto =>( 
+                    productos.map((producto) =>( 
                         <ProductoItem 
                         key= {producto.id} 
                         id= {producto.id}
