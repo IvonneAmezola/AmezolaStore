@@ -26,7 +26,7 @@ export const ProductoItem = ({
             <div className="producto__footer">
                 <h1> {title} </h1>
                 <p> {category} </p>
-                <p className="price">{price}</p>
+                <p className="price">${price}</p>
             </div>
             <div className="buttom">
                 <button className="btn">

@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 
 import {DataContext } from "../../context/Dataprovider";
-import {ProductoItem} from "./Productos/ProductoItem";
+import {ProductoItem} from "./ProductoItem";
 
 export const ProductosLista = () => {
 
