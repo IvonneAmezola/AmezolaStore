@@ -3,14 +3,15 @@ import { Header } from "./componentes/Header";
 import "boxicons";
 import {BrowserRouter as Router} from "react-router-dom";
 import { Paginas } from "./componentes/Paginas";
-//import { DataProvider } from "./context/Dataprovider";
+import { DataProvider } from "./context/Dataprovider";
+//import { Carrito } from "./componentes/Carrito";
 
 function App() {
   return (
     <div className="App">
       <Router>
-      <Header/>
-      <Paginas/>
+      <Header />
+      <Paginas />
       </Router>
     </div>
   );
