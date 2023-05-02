@@ -1,30 +1,25 @@
 import { createContext, useState, useEffect } from "react";
-import Data from '../Data.js';
+import Data from "../Data.js";
 
 export const DataContext = createContext();
 
-export const DataProvider =(props) =>{
-    const [productos, setProductos] = useState([])
-    
-    useEffect(() =>{
-        const producto = Data.items
-        if (producto){
-            setProductos(producto)
-        }else{
-            setProductos(producto)
-        }
+export const DataProvider = (props) => {
+  const [productos, setProductos] = useState([]);
 
-        
-    },[])
-
-    const value ={
-        productos :[productos]
+  useEffect(() => {
+    const producto = Data.items || [];
+    if (producto) {
+      setProductos(producto);
+    } else {
+      setProductos(producto);
     }
+  }, []);
 
-    return (
-        <DataContext.Provider value = {value}>
-            {props.children}
-        </DataContext.Provider>
-    )
+  const value = {
+    productos: [productos],
+  };
 
-}
+  return (
+    <DataContext.Provider value={value}>{props.children}</DataContext.Provider>
+  );
+};
