@@ -1,7 +1,22 @@
-import React from "react";
+
+import React, {useContext} from "react";
 import logotipo from "../../images/logotipo.jpeg";
+import { DataContext } from "../../context/Dataprovider";
 
 export const Header = () => {
+  const value = useContext(DataContext);
+  const [menu, setMenu] = value.menu;
+  const [carrito] = value.carrito;
+  
+
+  const toogleMenu = () =>{
+    setMenu(!menu)
+  }
+    
+  }
+
+
+
   return (
     <header>
       <a href="/">
@@ -19,9 +34,9 @@ export const Header = () => {
           <a href="productos">PRODUCTOS</a>
         </li>
       </ul>
-      <div className="cart">
+      <div className="cart" onClick={toogleMenu}>
         <box-icon name="cart"></box-icon>
-        <span className="item_total">0</span>
+        <span className="item_total">{carrito.length} </span>
       </div>
     </header>
   );

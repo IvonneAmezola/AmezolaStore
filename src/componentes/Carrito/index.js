@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import Card from "../../images/individual.jpeg";
+import { DataContext } from "../../context/Dataprovider";
 
 export const Carrito = () => {
+    const value = useContext(DataContext)
+    const {menu, setMenu} = value.menu;
+
+    const tooglefalse =()=>{
+        setMenu(false);
+    }
+    const show1 = menu ? "carritos show" : "carritos";
+    const show2 = menu ? "carrito show" :"carrito";
+
+
+
+
     return (
-        <div className="carritos show">
-            <div className="carrito show">
-                <div className="carrito__close">
+        <div className={show1}>
+            <div className={show2}>
+                <div className="carrito__close" onClick={tooglefalse}>
                     <box-icon name="x"></box-icon>
                 </div>
                 <h2>Su carrito</h2>
