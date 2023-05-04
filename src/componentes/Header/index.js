@@ -7,18 +7,21 @@ export const Header = () => {
   const value = useContext(DataContext);
   const [menu, setMenu] = value.menu;
   const [carrito] = value.carrito;
-  
+  console.log(carrito)
 
   const toogleMenu = () =>{
     setMenu(!menu)
   }
     
-  }
+  
 
 
 
   return (
     <header>
+      <div className="menu">
+      <box-icon name="menu"></box-icon>
+      </div>
       <a href="/">
         <div className="logo">
           <img src={logotipo} alt="logo" width="150" />
