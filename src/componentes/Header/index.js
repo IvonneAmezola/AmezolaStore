@@ -12,11 +12,7 @@ export const Header = () => {
   const toogleMenu = () =>{
     setMenu(!menu)
   }
-    
   
-
-
-
   return (
     <header>
       <div className="menu">
@@ -24,17 +20,17 @@ export const Header = () => {
       </div>
       <a href="/">
         <div className="logo">
-          <img src={logotipo} alt="logo" width="150" />
+          <img src={logotipo} alt="logo" width="250" />
         </div>
       </a>
       <ul>
         <li>
-          <a href="/">INICIO</a>
+          <h3><a href="/">INICIO</a></h3>
         </li>
       </ul>
       <ul>
         <li>
-          <a href="productos">PRODUCTOS</a>
+        <h3><a href="productos">PRODUCTOS</a></h3>
         </li>
       </ul>
       <div className="cart" onClick={toogleMenu}>
