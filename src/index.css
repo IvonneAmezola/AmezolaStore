@@ -533,7 +533,7 @@ header p {
   color: #30333a;
 }
 
-/*----------HEADER-----------------*/
+/*----------FOOTER-----------------*/
 footer {
   width: 97%;
   min-height: 100px;
@@ -542,8 +542,8 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
   flex-wrap: wrap;
-  position: fixed;
   box-sizing: border-box;
   background-color: white;
   box-shadow: 5px 0 10px #18423650;
