@@ -13,7 +13,11 @@ export const Inicio = () => {
       </Link>
       <img src={Portada} alt="inicio"/>
         <h1>Amezola Store </h1>
-        <p> Telefono de contacto +52 3310970375 </p>
+        <h2> Telefono de contacto +52 3310970375 </h2>
+        <p>Nota: Los productos se hacen de manera artesanal, 
+          por lo que el tiempo de manufactura puede tardar 
+          entre 15 hasta 30 dias.</p>
+
     </div>
   
   );
