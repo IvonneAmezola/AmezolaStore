@@ -37,9 +37,10 @@ export const Header = () => {
         <box-icon name="cart"></box-icon>
         <span className="item_total">{carrito.length} </span>
       </div>
-      <div className="user" >
-        <box-icon name="user"></box-icon>
+      <div className="user">
+        <box-icon name="user"> </box-icon>
       </div>
+      <a href="login"></a>
     </header>
   );
 };

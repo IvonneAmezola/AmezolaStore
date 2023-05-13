@@ -18,9 +18,14 @@ function App() {
       <div className="App">
         <Router>
           <Header/>
-            <Profile/>
-            <LoginButton/>
+            {isAuthenticated ? (
+             <>
+              <Profile/>
               <LogoutButton/>
+              </>
+            ) : (
+            <LoginButton/>
+            )}
           <Carrito />
           <Paginas />
         </Router>
