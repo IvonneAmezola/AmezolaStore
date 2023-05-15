@@ -31,6 +31,19 @@ export const ProductoItem = ({
       </div>
       <div className="bottom">
         <button onClick={() => addCarrito(id)} className="btn">Añadir al Carrito</button>
+      <br></br>
+      <br></br>
+      <h3>Seleccione el color que desea</h3>
+
+        <select name="color_macetas" size="2" simple>
+        
+          <option value="blanco">Color blanco</option>
+
+          <option value="negro">Color negro</option>
+
+          <option value="gris">Color gris</option>
+
+        </select>
       </div>
       <br></br>
     </section>

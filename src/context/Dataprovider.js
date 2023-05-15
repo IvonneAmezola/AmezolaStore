@@ -31,7 +31,7 @@ export const DataProvider = (props) => {
 			})
 			setCarrito([...carrito, ...data])
 		}else{
-			alert("El producto se ha añadido al carrito")
+			alert("Producto añadido, si desea agregar mas, vaya al carrito")
 		}
 	}
 

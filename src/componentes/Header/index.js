@@ -3,6 +3,7 @@ import React, {useContext} from "react";
 import logotipo from "../../images/logotipo.jpeg";
 import { DataContext } from "../../context/Dataprovider";
 
+
 export const Header = () => {
   const value = useContext(DataContext);
   const [menu, setMenu] = value.menu;
@@ -37,10 +38,11 @@ export const Header = () => {
         <box-icon name="cart"></box-icon>
         <span className="item_total">{carrito.length} </span>
       </div>
-      <div className="user">
-        <box-icon name="user"> </box-icon>
+      <div className="user" >
+        <box-icon name="user"> 
+        <h3><a href="index">Usuario</a></h3>
+        </box-icon>
       </div>
-      <a href="login"></a>
     </header>
   );
 };

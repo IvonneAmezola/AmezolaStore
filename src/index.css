@@ -158,6 +158,28 @@ header p {
   text-align: center;
 }
 
+.productos select{
+  padding: .5rem 0 2rem 0;
+  color: #000f0b;
+  font-weight: normal;
+  font-size: 15;
+  font-weight: 10;
+  font-family: Helvetica, sans-serif;
+  box-shadow: 1px 10px 10px 2px rgba(0, 0, 0, .1);
+  border: 1px solid transparent;
+ 
+}
+
+.productos h3{
+  padding: 1rem;
+  color: #000f0b;
+  font-weight: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
 .productos {
   padding: 5rem 1rem;
   margin: 0 auto;
