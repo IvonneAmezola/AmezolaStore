@@ -5,7 +5,7 @@ const pass = document.getElementById("password")
 const form = document.getElementById("form")
 const parrafo = document.getElementById("warnings")
 
-form.addEventListener("submit", e=>{
+/*form.addEventListener("submit", e=>{
     e.preventDefault()
     let warnings =""
     let entrar = false
@@ -26,4 +26,4 @@ form.addEventListener("submit", e=>{
     if (entrar){
         parrafo.innerHTML = warnings
     }
-})
+})*/

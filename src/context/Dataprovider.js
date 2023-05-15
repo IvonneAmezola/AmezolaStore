@@ -9,6 +9,7 @@ export const DataProvider = (props) => {
   const [carrito, setCarrito] = useState([]);
   const [total, setTotal] = useState(0)
   
+  
   console.log(carrito)
   
   useEffect(() => {

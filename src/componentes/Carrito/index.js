@@ -98,6 +98,7 @@ export const Carrito = () => {
                         <h3>Total: ${total}</h3>
                         <br></br>
                         <button className="btn">Pagar</button>
+                        <p>Recuerda que todos los pedidos tienen un tiempo de produccion de 30 dias habiles</p>
                     </center>
                 </div>
             </div>

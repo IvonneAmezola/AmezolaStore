@@ -8,6 +8,7 @@ export const Header = () => {
   const value = useContext(DataContext);
   const [menu, setMenu] = value.menu;
   const [carrito] = value.carrito;
+  
   console.log(carrito)
 
   const toogleMenu = () =>{
@@ -39,9 +40,7 @@ export const Header = () => {
         <span className="item_total">{carrito.length} </span>
       </div>
       <div className="user" >
-        <box-icon name="user"> 
-        <h3><a href="index">Usuario</a></h3>
-        </box-icon>
+        <box-icon name="user"></box-icon>
       </div>
     </header>
   );
