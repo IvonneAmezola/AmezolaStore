@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import { DataContext } from "../../context/Dataprovider";
-
+import Formulario from "../Pedidos/index";
 export const Carrito = () => {
     const value = useContext(DataContext)
     const [menu, setMenu] = value.menu;
     const [carrito, setCarrito] = value.carrito;
     const [total] = value.total;
+    
 
 
     const tooglefalse = () => {
@@ -98,6 +99,7 @@ export const Carrito = () => {
                         <h3>Total: ${total}</h3>
                         <br></br>
                         <button className="btn">Pagar</button>
+                        <div id ="paypal-button-conteiner"></div>
                         <p>Recuerda que todos los pedidos tienen un tiempo de produccion de 30 dias habiles</p>
                     </center>
                 </div>
