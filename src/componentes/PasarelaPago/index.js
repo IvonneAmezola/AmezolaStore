@@ -74,7 +74,7 @@ const createProduct = (req, res) => {
         name: 'AmezolaStore',
         description: "tienda",
         type: 'SERVICE',
-        category: 'maetas',
+        category: 'macetas',
         image_url: 'https://avatars.githubusercontent.com/u/15802366?s=460&u=ac6cc646599f2ed6c4699a74b15192a29177f85a&v=4'
 
     }
@@ -213,4 +213,3 @@ app.post(`/generate-subscription`, generateSubscription)
 app.listen(3000, () => {
     console.log(`Comenzemos a generar dinero --> http://localhost:3000`);
 })
-       
