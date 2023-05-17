@@ -15,6 +15,16 @@ const validate = (values) => {
   } else if (values.lastName.length > 20) {
     errors.lastName = "Must be 20 characters or less";
   }
+  if (!values.phone) {
+    errors.phone = "Required";
+  } else if (values.phone.length >= 10) {
+    errors.phone = "Must be 10 characters";
+  }
+  if (!values.address) {
+    errors.address = "Required";
+  } else if (values.address.length > 10) {
+    errors.address = "Must be more than 10 characters";
+  }
 
   if (!values.email) {
     errors.email = "Required";
@@ -30,25 +40,31 @@ const Formulario = () => {
     initialValues: {
       firstName: "",
       lastName: "",
+      phone: "",
+      address: "",
       email: "",
     },
     validate,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      alert(JSON.stringify(values, null, 4));
     },
   });
   return (
     <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="firstName">First Name</label>
-      <input
-        id="firstName"
-        name="firstName"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.firstName}
-      />
+      <div>
+        <label htmlFor="firstName">Nombre</label>
+        <input
+          id="firstName"
+          name="firstName"
+          type="text"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.firstName}
+        />
+      </div>
+      
       {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
+      <br></br>
 
       <label htmlFor="lastName">Last Name</label>
       <input
@@ -59,20 +75,39 @@ const Formulario = () => {
         onBlur={formik.handleBlur}
         value={formik.values.lastName}
       />
-      {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
-
-      <label htmlFor="email">Email Address</label>
+      {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
+      <label htmlFor="phone">Last Name</label>
       <input
-        id="email"
-        name="email"
-        type="email"
+        id="phone"
+        name="phone"
+        type="text"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.email}
+        value={formik.values.phone}
       />
-      {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+      {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
 
-      <button type="submit">Submit</button>
+      <div>
+        <label htmlFor="email">Email Address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.email}
+        />
+      </div>
+
+      {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+      <br></br>
+      
+      <p>
+        Recuerda que todos los pedidos tienen un tiempo de producción de
+        30 Dias hábiles
+      </p>
+      <br></br>
+      <button className="btn" type="submit">Pagar</button>
     </form>
   );
 };

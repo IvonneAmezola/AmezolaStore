@@ -116,6 +116,10 @@ export const Carrito = () => {
     }
   }, [success]);
 
+  useEffect(() => {
+    setShow(false);
+  }, [carrito]);
+
   const show1 = menu ? "carritos show" : "carritos";
   const show2 = menu ? "carrito show" : "carrito";
   const initialOptions = {
