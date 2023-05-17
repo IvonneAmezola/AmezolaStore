@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from '@auth0/auth0-react';
 
+<script src="httpx://wwwpaypal.com/sdk/js?client-id=AatZt26Zvkt4scMztDw5-XBC7PBhlCf1dqqdF0Zjy2ikL4LY9w-gTY9lKiQC-VGdX7YSLkKzmuNxBPtm&currency=MXN"></script>
+
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider domain='dev-beyk0cqbjnajc8zs.us.auth0.com' 

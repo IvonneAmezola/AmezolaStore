@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { DataContext } from "../../context/Dataprovider";
 import Formulario from "../Pedidos/index";
+
 export const Carrito = () => {
     const value = useContext(DataContext)
     const [menu, setMenu] = value.menu;
