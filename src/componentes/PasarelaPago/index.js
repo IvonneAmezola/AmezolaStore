@@ -213,4 +213,3 @@ app.post(`/generate-subscription`, generateSubscription)
 app.listen(3000, () => {
     console.log(`Comenzemos a generar dinero --> http://localhost:3000`);
 })
-       
