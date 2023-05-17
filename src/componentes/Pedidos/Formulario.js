@@ -20,6 +20,11 @@ const validate = (values) => {
   } else if (values.phone.length >= 10) {
     errors.phone = "Must be 10 characters";
   }
+  if (!values.address) {
+    errors.address = "Required";
+  } else if (values.address.length > 10) {
+    errors.address = "Must be more than 10 characters";
+  }
 
   if (!values.email) {
     errors.email = "Required";
@@ -36,11 +41,12 @@ const Formulario = () => {
       firstName: "",
       lastName: "",
       phone: "",
+      address: "",
       email: "",
     },
     validate,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 3));
+      alert(JSON.stringify(values, null, 4));
     },
   });
   return (
@@ -60,35 +66,26 @@ const Formulario = () => {
       {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
       <br></br>
 
-      <div>
-        <label htmlFor="lastName">Last Name</label>
-        <input
-          id="lastName"
-          name="lastName"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.lastName}
-        />
-      </div>
-      
+      <label htmlFor="lastName">Last Name</label>
+      <input
+        id="lastName"
+        name="lastName"
+        type="text"
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        value={formik.values.lastName}
+      />
       {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
-      <br></br>
-
-      <div>
-        <label htmlFor="phone">Last Name</label>
-        <input
-          id="phone"
-          name="phone"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.phone}
-        />
-      </div>
-
+      <label htmlFor="phone">Last Name</label>
+      <input
+        id="phone"
+        name="phone"
+        type="text"
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        value={formik.values.phone}
+      />
       {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
-      <br></br>
 
       <div>
         <label htmlFor="email">Email Address</label>
