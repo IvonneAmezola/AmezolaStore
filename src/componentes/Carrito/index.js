@@ -106,14 +106,16 @@ export const Carrito = () => {
             <br></br>
             <button className="btn">Pagar</button>
             <div id="checkout-button-container"></div>
+            <br></br>
             <p>
               Recuerda que todos los pedidos tienen un tiempo de producción de
               30 Dias hábiles
             </p>
+            <br></br>
+            <Formulario />
           </center>
         </div>
       </div>
-      <Formulario />
     </section>
   );
 };
