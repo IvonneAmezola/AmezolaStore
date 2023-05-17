@@ -28,9 +28,10 @@ export const Header = () => {
       </div>
       <a href="/">
         <div className="logo">
-          <img src={logotipo} alt="logo" width="250" />
+          <img src={logotipo} alt="logo" width="300" />
         </div>
       </a>
+      &nbsp;
       <ul>
         <li>
           <h3>
@@ -38,6 +39,7 @@ export const Header = () => {
           </h3>
         </li>
       </ul>
+      &nbsp;
       <ul>
         <li>
           <h3>
@@ -48,11 +50,13 @@ export const Header = () => {
       <ul>
         <li></li>
       </ul>
+      &nbsp;
       <div className="cart" onClick={toogleMenu}>
         <box-icon name="cart"></box-icon>
         <span className="item_total">{carrito.length} </span>
       </div>
       {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+      &nbsp;
     </header>
   );
 };
