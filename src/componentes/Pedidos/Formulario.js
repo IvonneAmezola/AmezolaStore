@@ -45,50 +45,72 @@ const Formulario = () => {
   });
   return (
     <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="firstName">First Name</label>
-      <input
-        id="firstName"
-        name="firstName"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.firstName}
-      />
+      <div>
+        <label htmlFor="firstName">Nombre</label>
+        <input
+          id="firstName"
+          name="firstName"
+          type="text"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.firstName}
+        />
+      </div>
+      
       {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
+      <br></br>
 
-      <label htmlFor="lastName">Last Name</label>
-      <input
-        id="lastName"
-        name="lastName"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.lastName}
-      />
+      <div>
+        <label htmlFor="lastName">Last Name</label>
+        <input
+          id="lastName"
+          name="lastName"
+          type="text"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.lastName}
+        />
+      </div>
+      
       {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
-      <label htmlFor="phone">Last Name</label>
-      <input
-        id="phone"
-        name="phone"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.phone}
-      />
-      {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
+      <br></br>
 
-      <label htmlFor="email">Email Address</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.email}
-      />
+      <div>
+        <label htmlFor="phone">Last Name</label>
+        <input
+          id="phone"
+          name="phone"
+          type="text"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.phone}
+        />
+      </div>
+
+      {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
+      <br></br>
+
+      <div>
+        <label htmlFor="email">Email Address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.email}
+        />
+      </div>
+
       {formik.errors.email ? <div>{formik.errors.email}</div> : null}
-
-      <button type="submit">Submit</button>
+      <br></br>
+      
+      <p>
+        Recuerda que todos los pedidos tienen un tiempo de producción de
+        30 Dias hábiles
+      </p>
+      <br></br>
+      <button className="btn" type="submit">Pagar</button>
     </form>
   );
 };
