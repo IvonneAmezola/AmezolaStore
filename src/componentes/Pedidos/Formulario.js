@@ -15,6 +15,11 @@ const validate = (values) => {
   } else if (values.lastName.length > 20) {
     errors.lastName = "Must be 20 characters or less";
   }
+  if (!values.phone) {
+    errors.phone = "Required";
+  } else if (values.phone.length >= 10) {
+    errors.phone = "Must be 10 characters";
+  }
 
   if (!values.email) {
     errors.email = "Required";
@@ -30,11 +35,12 @@ const Formulario = () => {
     initialValues: {
       firstName: "",
       lastName: "",
+      phone: "",
       email: "",
     },
     validate,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      alert(JSON.stringify(values, null, 3));
     },
   });
   return (
@@ -59,7 +65,17 @@ const Formulario = () => {
         onBlur={formik.handleBlur}
         value={formik.values.lastName}
       />
-      {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
+      {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
+      <label htmlFor="phone">Last Name</label>
+      <input
+        id="phone"
+        name="phone"
+        type="text"
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        value={formik.values.phone}
+      />
+      {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
 
       <label htmlFor="email">Email Address</label>
       <input
