@@ -76,8 +76,8 @@ export const Carrito = () => {
         .create({
           purchase_units: [
             {
-              description: `Compra en AmezolaStoe`,
-              soft_descriptor: "Compra en AmezolaStoe",
+              description: `Compra en AmezolaStore`,
+              soft_descriptor: "Compra en AmezolaStore",
               amount: {
                 currency_code: "MXN",
                 value: total,
