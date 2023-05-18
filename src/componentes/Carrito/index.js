@@ -197,7 +197,7 @@ export const Carrito = () => {
               <div id="checkout-button-container"></div>
               <br></br>
               <p>
-                Recuerda que todos los pedidos tienen un tiempo de producción de
+                IMPORTANTE: Recuerda que todos los pedidos tienen un tiempo de producción de
                 30 Dias hábiles
               </p>
             </center>
