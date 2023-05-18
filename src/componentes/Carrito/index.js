@@ -180,7 +180,6 @@ export const Carrito = () => {
           </div>
           <div className="carrito_footer">
             <center>
-              <br></br>
               <h3>Total: ${total}</h3>
               <br></br>
 
@@ -191,11 +190,12 @@ export const Carrito = () => {
                   onApprove={onApprove}
                 />
               ) : carrito && carrito.length > 0 && isAuthenticated ? (
-                <button type="submit" onClick={() => setShow(true)}>
+                <button class="btn" type="submit" onClick={() => setShow(true)}>
                   Continuar con la compra
                 </button>
               ) : null}
               <div id="checkout-button-container"></div>
+              <br></br>
               <p>
                 Recuerda que todos los pedidos tienen un tiempo de producción de
                 30 Dias hábiles

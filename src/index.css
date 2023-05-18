@@ -461,6 +461,7 @@ header p {
   width: 100%;
   padding: 13rem 1rem 0 1rem;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .detalles h2 {
@@ -484,12 +485,18 @@ header p {
   padding: 1rem 1rem;
   border: none;
   outline: 0;
-  background-color: #3033d3;
+  background-color: white;
   font-size: 1.6rem;
-  color: white;
+  color: black;
+  border: 2px solid #184236;
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.detalles__producto__img img{
+  width: 600px;
+  height: 800px;
 }
 
 .detalles .grid {
@@ -499,9 +506,9 @@ header p {
   max-width: 350px;
 }
 
-.detalles .grid>.nuevo,
+.detalles .grid .nuevo,
 .tamano {
-  padding: 1rem 2rem;
+  padding: 1rem 5rem;
   border-radius: 8px;
   font-size: 2rem;
   font-weight: 600;
@@ -510,7 +517,7 @@ header p {
 }
 
 .detalles .grid .nuevo {
-  background-color: #184236;
+  background-color: white;
 
 }
 
@@ -555,6 +562,14 @@ header p {
 .detalles .description b {
   font-size: 1.4rem;
   color: #30333a;
+}
+
+.detalles__division{
+  align-content: center;
+  height: 3px;
+  background-color: #184236;
+  width: 80%;
+  margin-top: 1%;
 }
 
 /*----------FOOTER-----------------*/
@@ -695,5 +710,4 @@ footer {
   .detalles {
     padding: 1rem 0;
   }
-
 }

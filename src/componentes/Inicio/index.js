@@ -12,7 +12,7 @@ export const Inicio = () => {
       <br></br>
       <br></br>
       <footer>
-      <br></br>
+        <br></br>
         <center>
           <h2> Para obtener más información sobre nuestros servicios, pongase en contacto, en breve lo atenderemos.</h2>
           <h3> Teléfono de Contacto: +52 (33)10970375, Visita nuestra tienda física en Av. Tonaltecas #84 Interior 11 </h3>
