@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { DataContext } from "../../context/Dataprovider";
 import { useParams } from "react-router-dom";
 import { ProductoItem } from "./ProductoItem";
@@ -8,96 +8,96 @@ export const ProductosDetalles = () => {
   const [productos] = value.productos;
   const addCarrito = value.addCarrito;
   const [detalle, setDetalle] = useState([])
-  const [url, setUrl]= useState(0)
+  const [url, setUrl] = useState(0)
   const [images, setImages] = useState('')
   const params = useParams();
   let item = 0;
 
-  useEffect(() =>{
-    console.log('re render' , params.id)
-    item=0;
-    productos.forEach(producto =>{
-      if(producto.id === parseInt(params.id)){
+  useEffect(() => {
+    console.log('re render', params.id)
+    item = 0;
+    productos.forEach(producto => {
+      if (producto.id === parseInt(params.id)) {
         setDetalle(producto)
         setUrl(0)
       }
     })
-  },[params.id, productos])
+  }, [params.id, productos])
 
   console.log(url)
 
-  useEffect(() =>{
+  useEffect(() => {
     const values = `${detalle.img1}${url}${detalle.img2}`;
-    setImages(values) 
-  },[url, params.id])
+    setImages(values)
+  }, [url, params.id])
 
-  const handleInput = (e) =>{
-  const number = e.target.value.toString().padStart(2,'01')
-   setUrl(number)
+  const handleInput = (e) => {
+    const number = e.target.value.toString().padStart(2, '01')
+    setUrl(number)
   }
 
-  if(detalle.length < 1) return null;
+  if (detalle.length < 1) return null;
 
   return (
     <>
-    {
-        <div className="detalles">
-          <h2>{detalle.title}</h2>
-          <p className="price">${detalle.price}</p>
-          <div className="grid">
-          <p className="nuevo">Nuevo</p>
-          <div className="tamano">
-            <select placeholder="Tamaño" >
-              <option value="1">1</option>
-              <option value="1">2</option>
-              <option value="1">3</option>
-              <option value="1">4</option>
-              <option value="1">5</option>
-              <option value="1">6</option>
-              <option value="1">7</option>
-              <option value="1">8</option>
-            </select>
-            <p>Tamaño</p>
-          </div>
-          </div>
-          <button onClick={() => addCarrito(detalle.id)}>
-            Añadir al carrito
-          </button>
-          
-          {
-            url ? <img src={images} alt={detalle.title}/> : <img src={detalle.image} alt={detalle.title}/>
-          }
-          <input type="range" min="1" max="36" step="1" value={url} onChange={handleInput} />
-          <div className="description">
-          <p><b>description: </b>Maceta hecha de material de barro, puede servir para planta natural o artificial. ademas cuenta con base de madera de pino con acabado en color nogal.</p>
-          <br/>
-          <p></p>
-          </div>
-          
-        </div>
-   
-    }
-    <h2 className="relacionados">Productos relacionados</h2>
-    <div className="productos">
       {
-        productos.map((producto)=>{
-          if((item < 6)&&(detalle.category === producto.category)){
-            item++;
-          return <ProductoItem 
-          key={producto.id}
-          title={producto.title}
-          image={producto.image}
-          category={producto.category}
-          price={producto.price}
-          id={producto.id}
-          />
+        <div className="detalles">
+          <center>
+          <h2>{detalle.title}</h2>
+          <hr class="detalles__division"></hr>
+          </center>
+          <br></br>
+          <br></br>
+          <br></br>
+          <div className="grid">
+            <p className="nuevo">Producto Nuevo</p>
+          </div>
+          {
+            <div class="detalles__producto__img">
+              <center>
+                <img src={detalle.image} alt={detalle.title} />
+              </center>
+            </div>
           }
-          
-        
-        })
+          <center>
+            <br></br>
+            <p className="price">${detalle.price}</p>
+            <br></br>
+            <button class="btn" onClick={() => addCarrito(detalle.id)}>
+              Añadir al carrito
+            </button>
+            <br></br>
+          </center>
+          <br></br>
+          <div className="description">
+            <p><b>Descripción del Producto: </b>Maceta hecha de material de barro, puede servir para planta natural o artificial. Además cuenta con base de madera de pino en acabado color nogal.</p>
+            <br />
+            <p></p>
+          </div>
+        </div>
       }
-     
-    </div>
+
+      <h2 className="relacionados">Productos Relacionados</h2>
+      <div className="productos">
+        {
+          productos.map((producto) => {
+            if ((item < 6) && (detalle.category === producto.category)) {
+              item++;
+              return <ProductoItem
+                key={producto.id}
+                title={producto.title}
+                image={producto.image}
+                category={producto.category}
+                price={producto.price}
+                id={producto.id}
+              />
+            }
+
+
+          })
+        }
+
+      </div>
     </>
   )
 }

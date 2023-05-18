@@ -17,7 +17,7 @@ export const Header = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      alert("wellcome " + user.name);
+      alert("Bienvenido " + user.name);
     }
   }, []);
 
@@ -46,9 +46,6 @@ export const Header = () => {
             <a href="/productos">PRODUCTOS</a>
           </h3>
         </li>
-      </ul>
-      <ul>
-        <li></li>
       </ul>
       &nbsp;
       <div className="cart" onClick={toogleMenu}>
